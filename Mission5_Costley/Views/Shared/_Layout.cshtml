@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - Basketball</title>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/calculator.js"></script>
+    <style>
+        /* Adjust the size of the icon */
+        img.icon {
+            width: 24px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align the icon vertically */
+            margin-right: 5px; /* Add some spacing between the icon and the title */
+        }
+
+        /* Style the title tag to display inline with the icon */
+        h1.title {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Style the navigation bar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+            nav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                nav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+    </style>
+</head>
+<body>
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Home" asp-action="Calculator">Calculator</a>
+    </nav>
+    <h1 class="title"><img src="~/images/icon_mission5.png" class="icon" /> @ViewData["Title"] - Basketball</h1>
+   
+</body>
+
+<body>
+    <header>
+      
+    </header>
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; 2024 My Basketball Hobby. All rights reserved. | Built by Lorin Costley</p>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
