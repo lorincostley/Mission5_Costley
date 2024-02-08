@@ -4,6 +4,7 @@
     <title>@ViewData["Title"] - Basketball</title>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/calculator.js"></script>
+    <!--This has my styles in it including the navigaiton bar-->
     <style>
         /* Adjust the size of the icon */
         img.icon {
@@ -42,6 +43,7 @@
 </head>
 <body>
     <nav>
+        <!--Routes to the two views-->
         <a asp-controller="Home" asp-action="Index">Home</a>
         <a asp-controller="Home" asp-action="Calculator">Calculator</a>
     </nav>
@@ -56,10 +58,11 @@
     <main role="main" class="container">
         @RenderBody()
     </main>
+    <!--Copyright footer-->
     <footer>
         <p>&copy; 2024 My Basketball Hobby. All rights reserved. | Built by Lorin Costley</p>
     </footer>
-
+    <!--Tells code to use scripts-->
     @RenderSection("Scripts", required: false)
 </body>
 </html>

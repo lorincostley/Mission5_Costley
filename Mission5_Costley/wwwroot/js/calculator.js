@@ -1,4 +1,6 @@
 ﻿$(document).ready(function () {
+
+    //Calculator functionality
     $('#calculate').click(function () {
         var hours = parseFloat($('#hours').val());
         if (!isNaN(hours) && hours > 0) {
